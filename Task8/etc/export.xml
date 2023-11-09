@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_ImportExport:etc/import.xsd">
+    <entity
+            name="posts_export"
+            label="Posts Export"
+            model="Speroteck\Task8\Model\Export\PostsExport"
+            entityAttributeFilterType="posts_export" />
+</config>

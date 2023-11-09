@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <route url="/V1/posts" method="POST">
+        <service class="Speroteck\Task7ApiCrud\Api\CrudPostInterface" method="addPosts"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route url="/V1/posts" method="GET" >
+        <service class="Speroteck\Task7ApiCrud\Api\CrudPostInterface" method="getAllPosts"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route url="/V1/posts/:id" method="DELETE">
+        <service class="Speroteck\Task7ApiCrud\Api\CrudPostInterface" method="deleteById"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route url="/V1/posts/:id" method="GET">
+        <service class="Speroteck\Task7ApiCrud\Api\CrudPostInterface" method="getById"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route url="/V1/posts/:id" method="PUT">
+        <service class="Speroteck\Task7ApiCrud\Api\CrudPostInterface" method="editById"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+</routes>

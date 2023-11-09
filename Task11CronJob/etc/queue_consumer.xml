@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework-message-queue:etc/consumer.xsd">
+    <consumer name="email.finish.checkout"
+              queue="email.finish.checkout"
+              connection="db"
+              handler="Speroteck\Task11CronJob\Model\Queue\Consumer\Consumer::process"
+              maxMessages="100"/>
+</config>

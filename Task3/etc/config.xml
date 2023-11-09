@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <carriers>
+            <custom>
+                <active>1</active>
+                <sallowspecific>0</sallowspecific>
+                <model>Speroteck\Task3\Model\Carrier\Custom</model>
+                <name>Custom Shipping</name>
+                <handling_type>F</handling_type>
+                <price>15.00123</price>
+                <title>Custom Method</title>
+                <type>I</type>
+                <specificerrmsg>This shipping method is not available right now.</specificerrmsg>
+            </custom>
+        </carriers>
+        <payment>
+            <custompayment>
+                <payment_action>authorize</payment_action>
+                <model>Speroteck\Task3\Model\PaymentMethod</model>
+                <active>1</active>
+                <title>Custom Payment</title>
+                <order_status>pending_payment</order_status>
+            </custompayment>
+        </payment>
+    </default>
+</config>

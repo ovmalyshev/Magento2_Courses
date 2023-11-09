@@ -1,0 +1,6 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <!-- https://devdocs.magento.com/guides/v2.3/extension-dev-guide/events-and-observers.html -->
+    <event name="sales_order_place_before">
+        <observer name="deliveryDate" instance="Speroteck\Task4\Observer\OrderPlaceBefore" />
+    </event>
+</config>

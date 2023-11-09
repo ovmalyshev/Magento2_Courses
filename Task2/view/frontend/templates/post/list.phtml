@@ -1,0 +1,12 @@
+<?php /** @var Speroteck\Task2\Block\Posts $block */ ?>
+    <h1>Toptal Posts</h1>
+<?php foreach ($block->getPosts() as $post): ?>
+    <?php /** @var Speroteck\Task2\Model\Post */ ?>
+    <h2><a href="<?= $block->getPostUrl($post);?>"><?= $post->getTitle(); ?></a></h2>
+    <p><?= $post->getContent(); ?></p>
+<?php endforeach; ?>
+
+    <h2><a href="<?= $block->getDelPostUrl();?>"><?= "Clear data"; ?></a></h2>
+    <h2><a href="<?= $block->getAddPostUrl();?>"><?= "Add data"; ?></a></h2>
+
+?>

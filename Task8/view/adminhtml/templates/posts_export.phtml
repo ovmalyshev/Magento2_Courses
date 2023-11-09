@@ -1,0 +1,11 @@
+
+<script>
+    require(['jquery'], function($){
+        const legendLabel = $('#export_filter_container legend');
+        if($('#export_filter_grid_table').length === 0) {
+            legendLabel.hide();
+        } else {
+            legendLabel.show();
+        }
+    });
+</script>

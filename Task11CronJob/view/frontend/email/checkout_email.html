@@ -1,0 +1,30 @@
+
+<!--@subject {{trans "Please confirm checkout"}}  @-->
+{{template config_path="design/email/header_template"}}
+
+
+<div class="email-template">
+    <div class="email-container">
+        You have items in your cart:
+        <ul>
+            {{for item in itemsParameters.items}}
+            <li> {{var item.name}}; quantity: <b>{{var item.qty}}</b></li>
+            {{/for}}
+        </ul>
+        Total price: {{var itemsParameters.totalPrice}} {{var itemsParameters.currency}}
+        <br>
+        Please finish checkout.
+    </div>
+</div>
+
+<div class="email-table-template">
+    <table>
+        <tr class="email-intro">
+            <td>
+                {{layout handle="email_checkout_items" itemsParameters=$itemsParameters area="frontend"}}
+            </td>
+        </tr>
+    </table>
+</div>
+
+{{template config_path="design/email/footer_template"}}

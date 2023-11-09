@@ -1,0 +1,23 @@
+<?php
+/** @var $block \Magento\Framework\View\Element\Template */
+?>
+<?php
+    echo "<br>";
+    echo "<b>" . "Example of using layout and block" . "</b> ";
+    echo "<br>";
+    $_items = $block->getItemsParameters();
+?>
+
+<tbody>
+	<?php
+        foreach ($_items['items'] as $value):
+            echo "<tr>";
+                echo "<td>" . "     - " . $value['name'] . "; quantity " . $value['qty'] . "</td>";
+            echo "</tr>";
+         endforeach;
+
+        echo "<tr>";
+            echo "<td>" . "Total price: " . $_items['totalPrice'] . " " . $_items['currency'] . "</td>";
+        echo "</tr>";
+    ?>
+</tbody>

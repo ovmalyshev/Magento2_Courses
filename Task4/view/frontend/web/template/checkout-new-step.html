@@ -1,0 +1,32 @@
+<!--Use 'stepCode' as id attribute-->
+<li data-bind="fadeVisible: isVisible, attr: { id: stepCode }">
+    <div class="step-title" data-bind="i18n: stepTitle" data-role="title"></div>
+    <div id="checkout-step-title" class="step-content" data-role="content">
+
+       <div class="table1" >
+            <h3>Table 1</h3>
+            <!-- ko foreach: { data: Object.values(checkoutFields), as: 'item' } -->
+            <!-- ko text: console.log(item) --><!-- /ko -->
+            <!-- ko text: item.label -->
+            <!-- /ko -->
+            <!-- ko template: { name: item.element.getTemplate(), data: item.element, as: 'element' } -->
+            <!-- /ko -->
+            <!-- /ko -->
+        </div>
+
+        <br/>
+
+        <p>The customer is <span data-bind="if: !isLogedIn">not</span> Logged-in</p>
+        <br/>
+
+        <form data-bind="submit: navigateToNextStep" novalidate="novalidate">
+            <div class="actions-toolbar">
+                <div class="primary">
+                    <button data-role="opc-continue" type="submit" class="button action continue primary">
+                        <span><!-- ko i18n: 'Next'--><!-- /ko --></span>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</li>

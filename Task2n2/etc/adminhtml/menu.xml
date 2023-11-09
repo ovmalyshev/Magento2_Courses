@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Speroteck_Task2n2::posts_menu" title="Task2n2" module="Speroteck_Task2n2" sortOrder="80" parent="Magento_Backend::content_elements" action="task2n2/posts/index" resource="Speroteck_Task2n2::posts" />
+    </menu>
+</config>

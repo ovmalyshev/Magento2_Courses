@@ -1,0 +1,46 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="checkout.root">
+            <arguments>
+                <argument name="jsLayout" xsi:type="array">
+                    <item name="components" xsi:type="array">
+                        <item name="checkout" xsi:type="array">
+                            <item name="children" xsi:type="array">
+                                <item name="steps" xsi:type="array">
+                                    <item name="children" xsi:type="array">
+                                        <!-- The new step -->
+                                        <item name="check-new-step" xsi:type="array">
+                                            <item name="component" xsi:type="string">Speroteck_Task4/js/view/checkout-new-step</item>
+                                            <item name="sortOrder" xsi:type="string">2</item>
+                                            <item name="children" xsi:type="array">
+                                                <item name="delivery-date" xsi:type="array">
+                                                    <item name="component" xsi:type="string">Magento_Ui/js/form/element/date</item>
+                                                    <item name="config" xsi:type="array">
+<!--                                                        <item name="label" xsi:type="string">Delivery4.2</item>-->
+<!--                                                        <item name="aaa" xsi:type="string">1</item>-->
+                                                        <item name="template" xsi:type="string">ui/form/field</item>
+                                                        <item name="elementTmpl" xsi:type="string">ui/form/element/date</item>
+                                                    </item>
+                                                </item>
+
+                                                <item name="certificate-value" xsi:type="array">
+                                                    <item name="component" xsi:type="string">Magento_Ui/js/form/element/textarea </item>
+                                                    <item name="config" xsi:type="array">
+<!--                                                        <item name="label" xsi:type="string">Certificate4.2</item>-->
+<!--                                                        <item name="aaa" xsi:type="string">2</item>-->
+                                                        <item name="template" xsi:type="string">ui/form/field</item>
+                                                        <item name="elementTmpl" xsi:type="string">ui/form/element/textarea</item>
+                                                    </item>
+                                                </item>
+                                            </item>
+                                        </item>
+                                    </item>
+                                </item>
+                            </item>
+                        </item>
+                    </item>
+                </argument>
+            </arguments>
+        </referenceBlock>
+    </body>
+</page>
